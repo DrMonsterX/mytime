@@ -8,25 +8,25 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY,generator = "JDBC")
     @Column(name = "user_id")
-    private int userId;
+    private Integer userId;
 
     @Column(name = "user_name")
     private String name;
 
     @Column(name = "icon_id")
-    private int iconId;
+    private Integer iconId;
 
     @Column(name = "user_password")
     private String password;
 
     @Column(name = "completeness_id")
-    private int completenessId;
+    private Integer completenessId;
 
-    public int getUserId() {
+    public Integer getUserId() {
         return userId;
     }
 
-    public void setUserId(int userId) {
+    public void setUserId(Integer userId) {
         this.userId = userId;
     }
 
@@ -38,11 +38,11 @@ public class User {
         this.name = name;
     }
 
-    public int getIconId() {
+    public Integer getIconId() {
         return iconId;
     }
 
-    public void setIconId(int iconId) {
+    public void setIconId(Integer iconId) {
         this.iconId = iconId;
     }
 
@@ -54,11 +54,11 @@ public class User {
         this.password = password;
     }
 
-    public int getCompletenessId() {
+    public Integer getCompletenessId() {
         return completenessId;
     }
 
-    public void setCompletenessId(int completenessId) {
+    public void setCompletenessId(Integer completenessId) {
         this.completenessId = completenessId;
     }
 }
