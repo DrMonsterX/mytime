@@ -8,79 +8,79 @@ public class Completeness {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY,generator = "JDBC")
     @Column(name = "completeness_id")
-    private int completenessId;
+    private Integer completenessId;
 
     @Column(name = "week_completeness")
-    private int weekCompleteness;
+    private Integer weekCompleteness=0;
 
     @Column(name = "history_one")
-    private int historyOne;
+    private Integer historyOne=0;
 
     @Column(name = "history_two")
-    private int historyTwo;
+    private Integer historyTwo=0;
 
     @Column(name = "history_three")
-    private int historyThree;
+    private Integer historyThree=0;
 
     @Column(name = "history_four")
-    private int historyFour;
+    private Integer historyFour=0;
 
     @Column(name = "history_five")
-    private int historyFive;
+    private Integer historyFive=0;
 
-    public int getCompletenessId() {
+    public Integer getCompletenessId() {
         return completenessId;
     }
 
-    public void setCompletenessId(int completenessId) {
+    public void setCompletenessId(Integer completenessId) {
         this.completenessId = completenessId;
     }
 
-    public int getWeekCompleteness() {
+    public Integer getWeekCompleteness() {
         return weekCompleteness;
     }
 
-    public void setWeekCompleteness(int weekCompleteness) {
+    public void setWeekCompleteness(Integer weekCompleteness) {
         this.weekCompleteness = weekCompleteness;
     }
 
-    public int getHistoryOne() {
+    public Integer getHistoryOne() {
         return historyOne;
     }
 
-    public void setHistoryOne(int historyOne) {
+    public void setHistoryOne(Integer historyOne) {
         this.historyOne = historyOne;
     }
 
-    public int getHistoryTwo() {
+    public Integer getHistoryTwo() {
         return historyTwo;
     }
 
-    public void setHistoryTwo(int historyTwo) {
+    public void setHistoryTwo(Integer historyTwo) {
         this.historyTwo = historyTwo;
     }
 
-    public int getHistoryThree() {
+    public Integer getHistoryThree() {
         return historyThree;
     }
 
-    public void setHistoryThree(int historyThree) {
+    public void setHistoryThree(Integer historyThree) {
         this.historyThree = historyThree;
     }
 
-    public int getHistoryFour() {
+    public Integer getHistoryFour() {
         return historyFour;
     }
 
-    public void setHistoryFour(int historyFour) {
+    public void setHistoryFour(Integer historyFour) {
         this.historyFour = historyFour;
     }
 
-    public int getHistoryFive() {
+    public Integer getHistoryFive() {
         return historyFive;
     }
 
-    public void setHistoryFive(int historyFive) {
+    public void setHistoryFive(Integer historyFive) {
         this.historyFive = historyFive;
     }
 }
