@@ -10,7 +10,7 @@ public class User {
     @Column(name = "user_id")
     private Integer userId;
 
-    @Column(name = "user_name")//test
+    @Column(name = "user_name")
     private String name;
 
     @Column(name = "icon_id")

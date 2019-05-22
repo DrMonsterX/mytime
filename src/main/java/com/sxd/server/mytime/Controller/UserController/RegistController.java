@@ -8,10 +8,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class RegistController {
+public class RegistController implements IRegist{
     @Autowired
     private RegistService registService;
 
+    //用户注册
     @RequestMapping(value = "regist",method = RequestMethod.GET)
     public int regist(String name,Integer iconId,String password){
         User user=new User();
