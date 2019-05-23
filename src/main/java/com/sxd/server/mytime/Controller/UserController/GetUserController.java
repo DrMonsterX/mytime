@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class LoginController implements ILogin{
+public class GetUserController implements IGetUser {
     @Autowired
     private LoginService loginService;
 
@@ -16,7 +16,7 @@ public class LoginController implements ILogin{
     //通过id查询用户数据，返回用户信息
     //若id不存在则返回null
     @RequestMapping(value = "checkLogin",method = RequestMethod.GET)
-    public User checkLogin(Integer userId){
+    public User getUser(Integer userId){
         User user=null;
         try{
             user=loginService.getUser(userId);
