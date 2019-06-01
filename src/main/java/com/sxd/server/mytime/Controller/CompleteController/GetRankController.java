@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.Comparator;
 import java.util.List;
 @RestController
-public class GetRankController implements IGetRank{
+public class GetRankController {
     @Autowired
     private GetCompleteController getCompleteController;
     @Autowired

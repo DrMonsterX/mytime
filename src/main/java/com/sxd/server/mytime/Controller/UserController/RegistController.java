@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class RegistController implements IRegist{
+public class RegistController {
     @Autowired
     private RegistService registService;
 

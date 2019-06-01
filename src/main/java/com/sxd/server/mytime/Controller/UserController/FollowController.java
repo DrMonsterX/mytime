@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-public class FollowController implements IFollow{
+public class FollowController {
     @Autowired
     private FollowService followService;
     @Autowired

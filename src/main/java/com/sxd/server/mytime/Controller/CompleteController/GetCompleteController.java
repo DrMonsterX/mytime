@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class GetCompleteController implements IGetComplete {
+public class GetCompleteController {
     @Autowired
     private GetCompleteService getCompleteService;
 

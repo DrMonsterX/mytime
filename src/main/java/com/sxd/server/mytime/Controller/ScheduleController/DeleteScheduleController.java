@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class DeleteScheduleController implements IDeleteSchedule{
+public class DeleteScheduleController {
     @Autowired
     private DeleteScheduleService deleteScheduleService;
 
