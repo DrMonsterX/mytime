@@ -23,4 +23,15 @@ public class NodeService {
         criteria.andEqualTo("taskId",taskId);
         return nodeMapper.deleteByExample(example);
     }
+
+    //修改结点完成信息
+    public int finishNode(Integer nodeId,Integer finishNum)throws Exception{
+        Node node=null;
+        node=nodeMapper.selectByPrimaryKey(nodeId);
+        if(node==null){
+            return -2;
+        }
+        node.setIsComplete(finishNum);
+        return nodeMapper.updateByPrimaryKey(node);
+    }
 }

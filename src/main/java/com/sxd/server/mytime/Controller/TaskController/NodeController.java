@@ -12,6 +12,7 @@ public class NodeController {
     @Autowired
     private NodeService nodeService;
 
+    //添加结点
     @RequestMapping(value = "addNode",method = RequestMethod.GET)
     public int addNode(Integer taskId,String nodeName,String nodeTime,Integer finishNum){
         Node node=new Node();
@@ -28,11 +29,24 @@ public class NodeController {
         return result;
     }
 
+    //删除对应任务所有结点
     @RequestMapping(value = "deleteAllNode",method = RequestMethod.GET)
     public int deleteAllNode(Integer taskId){
         int result=-1;
         try {
             result=nodeService.deleteAllNode(taskId);
+        }catch (Exception e){
+            System.out.println(e);
+        }
+        return result;
+    }
+
+    //修改结点完成信息
+    @RequestMapping(value = "finishNode",method = RequestMethod.GET)
+    public int finishNode(Integer nodeId,Integer finishNum){
+        int result=-1;
+        try {
+            result=nodeService.finishNode(nodeId,finishNum);
         }catch (Exception e){
             System.out.println(e);
         }
