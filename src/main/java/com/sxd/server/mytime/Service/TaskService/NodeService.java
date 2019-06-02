@@ -4,6 +4,7 @@ import com.sxd.server.mytime.Dao.NodeMapper;
 import com.sxd.server.mytime.Entity.Node;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import tk.mybatis.mapper.entity.Example;
 
 @Service
 public class NodeService {
@@ -15,5 +16,11 @@ public class NodeService {
         return nodeMapper.insert(node);
     }
 
-
+    //删除目标任务的所有结点
+    public int deleteAllNode(Integer taskId)throws Exception{
+        Example example=new Example(Node.class);
+        Example.Criteria criteria=example.createCriteria();
+        criteria.andEqualTo("taskId",taskId);
+        return nodeMapper.deleteByExample(example);
+    }
 }

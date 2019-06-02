@@ -27,4 +27,15 @@ public class NodeController {
         }
         return result;
     }
+
+    @RequestMapping(value = "deleteAllNode",method = RequestMethod.GET)
+    public int deleteAllNode(Integer taskId){
+        int result=-1;
+        try {
+            result=nodeService.deleteAllNode(taskId);
+        }catch (Exception e){
+            System.out.println(e);
+        }
+        return result;
+    }
 }
