@@ -7,6 +7,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @RestController
 public class NodeController {
     @Autowired
@@ -27,6 +30,18 @@ public class NodeController {
             System.out.println(e);
         }
         return result;
+    }
+
+    //获取任务id对应的所有节点
+    @RequestMapping(value = "getNodeByTaskId",method = RequestMethod.GET)
+    public List<Node> getNodeByTaskId(Integer taskId){
+        List<Node> list=new ArrayList<>();
+        try {
+            list=nodeService.getNodeByTaskId(taskId);
+        }catch (Exception e){
+            System.out.println(e);
+        }
+        return list;
     }
 
     //删除对应任务所有结点

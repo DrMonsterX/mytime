@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import tk.mybatis.mapper.entity.Example;
 
+import java.util.List;
+
 @Service
 public class NodeService {
     @Autowired
@@ -33,5 +35,13 @@ public class NodeService {
         }
         node.setIsComplete(finishNum);
         return nodeMapper.updateByPrimaryKey(node);
+    }
+
+    //获取任务id对应的所有节点
+    public List<Node> getNodeByTaskId(Integer taskId)throws Exception{
+        Example example=new Example(Node.class);
+        Example.Criteria criteria=example.createCriteria();
+        criteria.andEqualTo("taskId",taskId);
+        return nodeMapper.selectByExample(example);
     }
 }
